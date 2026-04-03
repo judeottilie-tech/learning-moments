@@ -21,6 +21,25 @@ form {
     border: 1px solid var(--outline);
     border-radius: 0.25rem;
   }
+
+  .post {
+    margin: 3rem 5rem;
+    border: 1px solid var(--outline);
+    border-radius: 10px;
+    padding: 1rem 0rem 0rem 1rem;
+    box-shadow: 1px 2px 5px lightgray;
+    background-color: var(--offWhite);
+
+  }
+
+  .post-info {
+    margin: 3rem 5rem;
+    border: 1px solid var(--outline);
+    border-radius: 10px;
+    padding: 1rem 0rem 0rem 1rem;
+    box-shadow: 1px 2px 5px lightgray;
+    background-color: var(--offWhite);
+  }
   
   .form-group {
     margin-right: 1rem;

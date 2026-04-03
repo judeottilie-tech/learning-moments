@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { createUser } from "../services/userService"
+import { createUser } from "../../services/userService"
 import { Link } from "react-router-dom"
 import "./Login.css"
 

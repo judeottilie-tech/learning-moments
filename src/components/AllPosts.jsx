@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { getAllPosts } from "../../services/postService"
-import { getTopics } from "../../services/topicService"
+import { getAllPosts } from "../services/postService.jsx"
+import { getTopics } from "../services/topicService.jsx"
 
 export const AllPosts = () => {
   const [posts, setPosts] = useState([])

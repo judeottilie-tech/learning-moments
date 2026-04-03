@@ -24,14 +24,13 @@ export const NavBar = () => {
           <Link to="/profile">Profile</Link>
         </li>
 
-        {localStorage.getItem("user") ? (
+        {localStorage.getItem("learning_user") ? (
             <li className="navbar-item navbar-logout">
             <Link className="navbar-link"
             to=""
             onClick={() => {
-                localStorage.removeItem("learning_user") navigate ("/login", {
-                    replace: true
-                })
+              localStorage.removeItem("learning_user")
+              navigate("/login", { replace: true })
             }}>
                 Logout
             </Link>
