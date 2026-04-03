@@ -43,18 +43,7 @@
       "date": "2026-03-20",
       "userId": 3,
       "topicId": 1
-    },
-      ],
-      "topic": {
-        "id": 2,
-        "name": "Asynchronous Programming"
-      },
-      "user": {
-        "fullName": "Jude Andersen",
-        "email": "jude@learners.com",
-        "cohort": 80,
-        "id": 4
-      }
+    }
   ],
   "topics": [
     {
