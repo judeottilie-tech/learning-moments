@@ -1,4 +1,5 @@
 <h1>Learning Moments</h1>
+<p><img src="https://raw.githubusercontent.com/judeottilie-tech/learning-moments/refs/heads/judeottilie-tech-patch-1/Animation.gif"/></p>
 An application built with React. Allows users to create posts, share posts with other users, and has the ability to favorite programming concepts posted by other users. Lets the user edit their own posts and profile.
 
 <div><p><h2>Features:</h2></p>
@@ -12,8 +13,6 @@ An application built with React. Allows users to create posts, share posts with 
 <p>JSON Server (RESTful API)</p>
 <p>CSS</p>
 <p>JavaScript</p></div>
-
-<img src="https://raw.githubusercontent.com/judeottilie-tech/learning-moments/refs/heads/judeottilie-tech-patch-1/Animation.gif"/>
 
 <h3>for running locally:</h3>
 
