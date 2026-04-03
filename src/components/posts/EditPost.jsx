@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getPostById, editPost } from "../../services/postService.jsx"
 import { getTopics } from "../../services/topicService.jsx"
+import "./Post.css"
 
 export const EditPost = ({ currentUser }) => {
   const { id } = useParams()

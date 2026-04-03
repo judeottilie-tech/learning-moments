@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom"
+import "./Post.css"
 
 export const PostFilterBar = ({ setSearchTerm, currentUser }) => {
   const navigate = useNavigate()

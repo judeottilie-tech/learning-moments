@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { getUsers, updateUser } from "../services/userService.jsx"
+import "./User.css"
 
 export const EditProfile = ({ currentUser }) => {
     const { id } = useParams()

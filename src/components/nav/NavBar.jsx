@@ -1,43 +1,44 @@
 import "./NavBar.css"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
-
 export const NavBar = ({ currentUser }) => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
-    return (
-      <ul className="navBar">
-        <li className="navbar-item">
-          <Link to="/">All Posts</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/myposts">My Posts</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/newpost">New Post</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to="/favorites">Favorites</Link>
-        </li>
-        <li className="navbar-item">
-          <Link to={`/profile/${currentUser?.id}`}>Profile</Link>
-        </li>
+  return (
+    <ul className="navBar">
+      <li className="navbar-item">
+        <NavLink to="/">All Posts</NavLink>
+      </li>
+      <li className="navbar-item">
+        <NavLink to="/myposts">My Posts</NavLink>
+      </li>
+      <li className="navbar-item">
+        <NavLink to="/newpost">New Post</NavLink>
+      </li>
+      <li className="navbar-item">
+        <NavLink to="/favorites">Favorites</NavLink>
+      </li>
+      <li className="navbar-item">
+        <NavLink to={`/profile/${currentUser?.id}`}>Profile</NavLink>
+      </li>
 
-        {localStorage.getItem("learning_user") ? (
-            <li className="navbar-item navbar-logout">
-            <Link className="navbar-link"
+      {localStorage.getItem("learning_user") ? (
+        <li className="navbar-item navbar-logout">
+          <NavLink
+            className="navbar-link"
             to=""
             onClick={() => {
               localStorage.removeItem("learning_user")
-              navigate("/login", { replace: true })
-            }}>
-                Logout
-            </Link>
+              window.location.href = "/login"
+            }}
+          >
+            Logout
+          </NavLink>
         </li>
-        ) : (
+      ) : (
         ""
-        )}
-      </ul>
-    )
+      )}
+    </ul>
+  )
 }

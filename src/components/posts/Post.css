@@ -1,188 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Quicksand&family=Roboto:wght@100&display=swap");
+
+:root {
+    --primary: #ff69b4;
+    --secondary: #a8c4e0;
+    --info: #7fb800;
+    --warning: #f6511d;
+    --white: #ffffff;
+    --offWhite: #f2f2f3;
+    --dark: #3b3b3b;
+    --outline: #c3c0c0;
+    --appBackground: #e8e8e8;
+    --cardBackground: #d4d4d4;
+    --metaText: #6b6b6b;
+}
+
+/* FORMS */
 form {
-    margin: 3rem 5rem;
+    margin: 2rem auto;
+    max-width: 600px;
     border: 1px solid var(--outline);
     border-radius: 10px;
-    padding: 1rem 0rem 0rem 1rem;
-    box-shadow: 1px 2px 5px lightgray;
+    padding: 1.5rem;
     background-color: var(--offWhite);
-  }
-  
-  fieldset {
+}
+
+fieldset {
     min-width: 0;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
     margin: 0;
     border: 0;
-  }
-  
-  .form-control {
-    height: calc(1.5em + 0.75rem + 2px);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: var(--dark);
+}
+
+.form-control {
+    padding: 0.4rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--outline);
+    border-radius: 0.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--offWhite);
+}
+
+.form-btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+}
+
+/* POST LIST */
+.posts {
+    margin: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.posts-filter-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.post-search {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     border: 1px solid var(--outline);
     border-radius: 0.25rem;
-  }
+    background-color: var(--offWhite);
+    width: 280px;
+}
 
-  .post {
-    margin: 3rem 5rem;
+.topic-select {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border: 1px solid var(--outline);
+    border-radius: 0.25rem;
+    background-color: var(--offWhite);
+}
+
+/* POST CARDS */
+.post-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cardBackground);
+    border: 1px solid var(--outline);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.post-card-title {
+    flex: 2;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.post-card-title:hover {
+    color: var(--primary);
+}
+
+.post-card-meta {
+    flex: 2;
+    color: var(--metaText);
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: right;
+}
+
+.post-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-left: 1rem;
+}
+
+/* POST DETAILS */
+.post-detail {
+    margin: 2rem 3rem;
+    background-color: var(--offWhite);
     border: 1px solid var(--outline);
     border-radius: 10px;
-    padding: 1rem 0rem 0rem 1rem;
-    box-shadow: 1px 2px 5px lightgray;
-    background-color: var(--offWhite);
-
-  }
-
-  .post-info {
-    margin: 3rem 5rem;
-    border: 1px solid var(--outline);
-    border-radius: 10px;
-    padding: 1rem 0rem 0rem 1rem;
-    box-shadow: 1px 2px 5px lightgray;
-    background-color: var(--offWhite);
-  }
-  
-  .form-group {
-    margin-right: 1rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-  }
-  
-  .form-btn {
-    align-self: flex-end;
-  }
-  
-  .form-btn:focus {
-    box-shadow: none;
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-
-  /* Import the google web fonts you want to use */
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Quicksand&family=Roboto:wght@100&display=swap");
-
-/* FONTS
-font-family: "Nunito", sans-serif;
-font-family: "Quicksand", sans-serif;
-font-family: "Roboto", sans-serif; 
-*/
-
-/* COLOR PALETTE */
-/* Feel free to change these values and create your own color palette! https://coolors.co/ is a great resource */
-:root {
-  --primary: #ffb400;
-  --secondary: #00a6ed;
-  --info: #7fb800;
-  --warning: #f6511d;
-  --white: #ffffff;
-  --offWhite: #f2f2f3;
-  --dark: #3b3b3b;
-  --outline: #c3c0c0;
-  --appBackground: #dddade;
+    gap: 1rem;
 }
 
-/* GLOBAL STYLES */
-body,
-button,
-input,
-select,
-textarea {
-  font-family: "Nunito", sans-serif;
+.post-detail-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--dark);
+    background-color: var(--cardBackground);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
 }
 
-body {
-  background-color: var(--appBackground);
-  margin: 0;
+.post-detail-meta {
+    color: var(--metaText);
+    font-size: 0.9rem;
+    font-style: italic;
+    background-color: var(--cardBackground);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto", serif;
+.post-detail-author {
+    color: var(--metaText);
+    font-style: italic;
 }
 
-/* This prevents all the links in the app from having default underline */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-/* This prevents all the links in the app from turning purple after visiting */
-a:visited {
-  color: inherit;
-}
-/* This prevents all the inputs in the app from having that blue outline when in focus */
-input:focus {
-  outline: none;
+.post-detail-author:hover {
+    color: var(--primary);
+    text-decoration: underline;
 }
 
-/* GLOBAL STYLING FOR ALL THE BUTTONS BUTTONS */
-button {
-  padding: 0.5rem 1rem;
-  border: 1px solid transparent;
-  border-radius: 0.5rem;
-  color: var(--white);
-  cursor: pointer;
+.post-detail-body {
+    border: 1px dashed var(--outline);
+    border-radius: 8px;
+    padding: 1rem;
+    line-height: 1.8;
+    color: var(--metaText);
+    background-color: var(--offWhite);
+    min-height: 120px;
 }
 
-/* These are all the color options for the buttons */
-/* If you change the color variables, be sure to change the hover colors to be a darker shade of the colors you chose*/
-.btn-primary {
-  background-color: var(--primary);
+.post-detail-actions {
+    display: flex;
+    justify-content: flex-end;
 }
 
-.btn-primary:hover {
-  background-color: #e5a000;
-}
-
-.btn-secondary {
-  background-color: var(--secondary);
-}
-
-.btn-secondary:hover {
-  background-color: #0097d7;
-}
-
-.btn-warning {
-  background-color: var(--warning);
-}
-
-.btn-warning:hover {
-  background-color: #e14617;
-}
-
-.btn-info {
-  background-color: var(--info);
-}
-
-.btn-info:hover {
-  background-color: #71a500;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-/* This CSS can be deleted. It is only used for the first chapter */
-.welcome {
-  text-align: center;
-  margin: 5rem 14rem;
-  font-size: 4rem;
-  color: aliceblue;
-  font-weight: bold;
-  text-shadow: 2px 3px 4px lightslategray;
-}
-
-.post-search {
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border: 1px solid var(--outline);
-  border-radius: 0.25rem;
-  margin-left: auto;
-}
-
-.filter-bar {
-  display: flex;
+.page-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
 }

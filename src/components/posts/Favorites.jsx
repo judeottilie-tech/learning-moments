@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { getAllPosts } from "../../services/postService.jsx"
 import { deletePostLike } from "../../services/postLikeService.jsx"
+import "./Post.css"
 
 export const Favorites = ({ currentUser }) => {
   const [likedPosts, setLikedPosts] = useState([])
@@ -30,12 +31,22 @@ export const Favorites = ({ currentUser }) => {
   }
 
   return (
-    <div className="favorites">
+    <div className="posts">
+      <h2 className="page-title">My Favorites</h2>
       {likedPosts.map((post) => {
         return (
-          <div key={post.id} className="post-item">
-            <Link to={`/posts/${post.id}`}>{post.title}</Link>
-            <button onClick={() => handleRemove(post.id)}>Remove</button>
+          <div key={post.id} className="post-card">
+            <Link to={`/posts/${post.id}`} className="post-card-title">
+              {post.title}
+            </Link>
+            <div className="post-card-actions">
+              <button
+                className="btn-warning"
+                onClick={() => handleRemove(post.id)}
+              >
+                ⭐ Remove
+              </button>
+            </div>
           </div>
         )
       })}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { getAllPosts } from "../services/postService.jsx"
 import { getTopics } from "../services/topicService.jsx"
+import "./posts/Post.css"
 
 export const AllPosts = () => {
   const [posts, setPosts] = useState([])
@@ -34,17 +35,14 @@ export const AllPosts = () => {
   return (
     <div className="posts">
       <input
-        onChange={(event) => {
-          setSearchTerm(event.target.value)
-        }}
+        onChange={(event) => setSearchTerm(event.target.value)}
         type="text"
         placeholder="Search Posts"
         className="post-search"
-      />{" "}
+      />
       <select
-        onChange={(event) => {
-          setSelectedTopic(event.target.value)
-        }}
+        onChange={(event) => setSelectedTopic(event.target.value)}
+        className="topic-select"
       >
         <option value="">All Topics</option>
         {topics.map((topic) => {
@@ -56,16 +54,16 @@ export const AllPosts = () => {
         })}
       </select>
 
-
       {filteredPosts.map((postObj) => {
         return (
-          <Link to={`/posts/${postObj.id}`} key={postObj.id}>
-            <div>
-              <h3>{postObj.title}</h3>
-              <p>{postObj.topic?.name}</p>
-              <p>{postObj.postLikes?.length} likes</p>
-            </div>
-          </Link>
+          <div key={postObj.id} className="post-card">
+            <Link to={`/posts/${postObj.id}`} className="post-card-title">
+              {postObj.title}
+            </Link>
+            <span className="post-card-meta">
+              {postObj.topic?.name} · {postObj.postLikes?.length} likes
+            </span>
+          </div>
         )
       })}
     </div>

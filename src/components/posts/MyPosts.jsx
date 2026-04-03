@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+
 import { getAllPosts, deletePost } from "../../services/postService.jsx"
+import "./Post.css"
 
 export const MyPosts = ({ currentUser }) => {
   const [posts, setPosts] = useState([])
@@ -22,12 +24,28 @@ export const MyPosts = ({ currentUser }) => {
   }
 
   return (
-    <div className="my-posts">
+    <div className="posts">
+      <h2 className="page-title">My Posts</h2>
       {posts.map((post) => {
         return (
-          <div key={post.id} className="post-items">
-            <Link to={`/posts/${post.id}`}>{post.title}</Link>
-            <button onClick={() => handleDelete(post.id)}>Delete</button>
+          <div key={post.id} className="post-card">
+            <Link to={`/posts/${post.id}`} className="post-card-title">
+              {post.title}
+            </Link>
+            <div className="post-card-actions">
+              <button
+                className="btn-secondary"
+                onClick={() => navigate(`/posts/${post.id}/edit`)}
+              >
+                Edit
+              </button>
+              <button
+                className="btn-warning"
+                onClick={() => handleDelete(post.id)}
+              >
+                Delete
+              </button>
+            </div>
           </div>
         )
       })}

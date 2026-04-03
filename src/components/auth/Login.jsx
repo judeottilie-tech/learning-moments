@@ -1,4 +1,5 @@
 //import { getUserByEmail } from "../../services/userService"
+import "./Login.css"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
@@ -28,33 +29,26 @@ export const Login = () => {
   }
 
   return (
-    <main>
-      <section>
+    <div className="login-container">
+      <div className="login-box">
+        <h1 className="login-title">Learning Moments</h1>
+        <p>Please sign in</p>
         <form onSubmit={handleLogin}>
-          <h1>Learning Moments</h1>
-          <h2>Please sign in</h2>
-          <fieldset>
-            <div>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email address"
-                required
-                autoFocus
-              />
-            </div>
-          </fieldset>
-          <fieldset>
-            <div>
-              <button type="submit">Sign in</button>
-            </div>
-          </fieldset>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email address"
+            required
+            autoFocus
+            className="form-control"
+          />
+          <button type="submit" className="btn-primary">
+            Sign in
+          </button>
         </form>
-      </section>
-      <section>
         <Link to="/register">Not a member yet?</Link>
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
