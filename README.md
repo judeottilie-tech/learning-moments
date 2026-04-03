@@ -15,7 +15,7 @@ An application built with React. Allows users to create posts, share posts with 
 
 <img src="https://raw.githubusercontent.com/judeottilie-tech/learning-moments/refs/heads/judeottilie-tech-patch-1/Animation.gif"/>
 
-for running locally:
+<h3>for running locally:</h3>
 
 <div><p>git clone (URL github gives you for this project here)</p>
 <p>npm install</p>
