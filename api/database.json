@@ -17,30 +17,6 @@
       "fullName": "Priya Patel",
       "email": "priya@learners.com",
       "cohort": "73"
-    },
-    {
-      "fullName": "Jude Andersen :)",
-      "email": "jude@learners.com",
-      "cohort": 80,
-      "id": 4
-    },
-    {
-      "fullName": "Big Ass Hoe",
-      "email": "big@big.big",
-      "cohort": 45,
-      "id": 5
-    },
-    {
-      "fullName": "Name",
-      "email": "hello@hello.hello",
-      "cohort": 100,
-      "id": 6
-    },
-    {
-      "fullName": "Name Here",
-      "email": "heh@heh.com",
-      "cohort": 303030,
-      "id": 7
     }
   ],
   "posts": [
@@ -68,35 +44,6 @@
       "userId": 3,
       "topicId": 1
     },
-    {
-      "title": "heres a title",
-      "userId": 1,
-      "body": "hahahahha",
-      "topicId": 2,
-      "date": "2026-04-03",
-      "id": 5
-    },
-    {
-      "title": "waattt",
-      "userId": 1,
-      "body": "jkfsjjsdjfs",
-      "topicId": 3,
-      "date": "2026-04-03",
-      "id": 6
-    },
-    {
-      "title": "oh to post.......",
-      "userId": 4,
-      "body": "here is my BIG CRAAAZZYYYY POST",
-      "topicId": 2,
-      "date": "2026-04-03",
-      "id": 7,
-      "postLikes": [
-        {
-          "userId": 5,
-          "postId": 7,
-          "id": 12
-        }
       ],
       "topic": {
         "id": 2,
@@ -108,45 +55,6 @@
         "cohort": 80,
         "id": 4
       }
-    },
-    {
-      "title": "HIIIIIIEEE",
-      "userId": 5,
-      "body": "kjhfsdhkjad",
-      "topicId": 2,
-      "date": "2026-04-03",
-      "id": 8,
-      "postLikes": [],
-      "topic": {
-        "id": 2,
-        "name": "Asynchronous Programming"
-      },
-      "user": {
-        "fullName": "Big Ass",
-        "email": "big@big.big",
-        "cohort": 45,
-        "id": 5
-      }
-    },
-    {
-      "title": "New Post",
-      "userId": 7,
-      "body": "yea",
-      "topicId": 2,
-      "date": "2026-04-03",
-      "id": 9,
-      "postLikes": [],
-      "topic": {
-        "id": 3,
-        "name": "Arrays"
-      },
-      "user": {
-        "fullName": "HEhe",
-        "email": "heh@heh.com",
-        "cohort": 303030,
-        "id": 7
-      }
-    }
   ],
   "topics": [
     {
@@ -168,72 +76,6 @@
       "userId": 2,
       "postId": 1,
       "likeId": 3
-    },
-    {
-      "id": 2,
-      "userId": 3,
-      "postId": 1,
-      "likeId": 2
-    },
-    {
-      "userId": 1,
-      "postId": 3,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "postId": 2,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "postId": 2,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "postId": 3,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "postId": 3,
-      "id": 9
-    },
-    {
-      "userId": 4,
-      "postId": 1,
-      "id": 10
-    },
-    {
-      "userId": 5,
-      "postId": 5,
-      "id": 11
-    },
-    {
-      "userId": 5,
-      "postId": 7,
-      "id": 12
-    },
-    {
-      "userId": 4,
-      "postId": 8,
-      "id": 13
-    },
-    {
-      "userId": 6,
-      "postId": 1,
-      "id": 14
-    },
-    {
-      "userId": 7,
-      "postId": 3,
-      "id": 15
-    },
-    {
-      "userId": 4,
-      "postId": 9,
-      "id": 16
     }
   ]
 }
