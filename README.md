@@ -17,7 +17,7 @@ An application built with React. Allows users to create posts, share posts with 
 
 for running locally:
 
-<div><p>git clone ...</p>
+<div><p>git clone (URL github gives you for this project here)</p>
 <p>npm install</p>
 <p>json-server --watch db.json -p 8088</p>
 <p>npm run dev</p></div>
