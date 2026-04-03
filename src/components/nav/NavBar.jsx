@@ -29,7 +29,7 @@ export const NavBar = () => {
             <Link className="navbar-link"
             to=""
             onClick={() => {
-                localStorage.removeItem("user") navigate ("/", {
+                localStorage.removeItem("learning_user") navigate ("/login", {
                     replace: true
                 })
             }}>

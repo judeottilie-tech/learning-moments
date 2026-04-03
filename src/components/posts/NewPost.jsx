@@ -41,7 +41,7 @@ export const NewPost = ({ currentUser }) => {
                     placeholder="Your text here.."
                     onChange={(event) => {
                         const postCopy = {...post}
-                        postCopy.description = event/target.value
+                        postCopy.description = event.target.value
                         setPost
                         (postCopy)
                     }}
