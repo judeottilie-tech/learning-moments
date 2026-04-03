@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { getPostById } from "../../services/postService.jsx"
 import { createPostLike } from "../../services/postLikeService.jsx" 
 
 export const PostDetails = ({ currentUser }) => {
     const { id } = useParams()
+    const navigate = useNavigate()
 
     const [post, setPost] = useState({})
 
@@ -20,7 +21,7 @@ export const PostDetails = ({ currentUser }) => {
                 postId: post.id,
             }
             createPostLike(newLike).then(() => {
-                //nav to favorites
+                navigate("/favorites")
             })
         }
 
@@ -35,7 +36,7 @@ export const PostDetails = ({ currentUser }) => {
            <p>{post.postLikes?.length} likes</p>
          </div>
          {currentUser.id === post.userId ? (
-           <button>Edit</button>
+           <button onClick={() => navigate(`/posts/${post.id}/edit`)}>Edit</button>
          ) : (
            <button onClick={handleLike}>Like</button>
          )}
